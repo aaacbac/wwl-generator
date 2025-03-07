@@ -8,7 +8,13 @@ import java.io.IOException;
 
 public class MainGenerator {
     public static void main(String[] args) throws TemplateException, IOException {
-
+        MainTemplateConfig mainTemplateConfig=new MainTemplateConfig();
+        mainTemplateConfig.setAuthor("wwl");
+        mainTemplateConfig.setLoop(true);
+        mainTemplateConfig.setOutputText("sum");
+        doGenerate(mainTemplateConfig);
+    }
+    public static void doGenerate(Object model) throws TemplateException, IOException {
         // 1.静态文件生成
         //文件根目录
         String propertyPath = System.getProperty("user.dir");
@@ -23,10 +29,6 @@ public class MainGenerator {
         //String propertyPath = System.getProperty("user.dir")+File.separator+"wwl-generator-basic";
         String DynamicInputPath = propertyPath+File.separator+"wwl-generator-basic/src/main/resources/templates/MainTemplate.java.ftl";
         String DynamicOutputPath = propertyPath+File.separator+"acm-template/src/com/yupi/acm/MainTemplate.java";
-        MainTemplateConfig mainTemplateConfig=new MainTemplateConfig();
-        mainTemplateConfig.setAuthor("wwl");
-        mainTemplateConfig.setLoop(true);
-        mainTemplateConfig.setOutputText("sum");
-        DynamicGenerator.doGenerator(DynamicInputPath,DynamicOutputPath,mainTemplateConfig);
+        DynamicGenerator.doGenerate(DynamicInputPath,DynamicOutputPath,model);
     }
 }
