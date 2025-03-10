@@ -1,12 +1,12 @@
-package com.wwl.maker.cli;
+package ${basePackage}.cli;
 
 
-import com.wwl.maker.cli.command.ConfigCommand;
-import com.wwl.maker.cli.command.GenerateCommand;
-import com.wwl.maker.cli.command.ListCommand;
+import ${basePackage}.cli.command.ConfigCommand;
+import ${basePackage}.cli.command.GenerateCommand;
+import ${basePackage}.cli.command.ListCommand;
 import picocli.CommandLine;
 
-@CommandLine.Command(name = "wzi", mixinStandardHelpOptions = true)
+@CommandLine.Command(name = "${name}", mixinStandardHelpOptions = true)
 public class CommandExecutor implements Runnable {
 
     private final CommandLine commandLine;

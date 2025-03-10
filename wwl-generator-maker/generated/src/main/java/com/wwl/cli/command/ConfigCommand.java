@@ -1,12 +1,12 @@
-package com.wwl.maker.cli.command;
+package com.wwl.cli.command;
 
 import cn.hutool.core.util.ReflectUtil;
-import com.wwl.maker.model.DataModel;
-import picocli.CommandLine;
+import com.wwl.model.DataModel;
+import picocli.CommandLine.Command;
 
 import java.lang.reflect.Field;
 
-@CommandLine.Command(name = "config", description = "查看参数信息", mixinStandardHelpOptions = true)
+@Command(name = "config", description = "查看参数信息", mixinStandardHelpOptions = true)
 public class ConfigCommand implements Runnable {
 
     public void run() {
@@ -23,4 +23,5 @@ public class ConfigCommand implements Runnable {
         }
     }
 }
+
 
