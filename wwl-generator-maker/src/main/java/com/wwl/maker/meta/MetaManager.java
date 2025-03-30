@@ -7,7 +7,7 @@ public class MetaManager {
 
     //双检索单例模式   全局仅存在一个
     private static volatile Meta meta;      //volatile：并发编程中用于确保多线程环境下的内存可见性
-    public static Meta getMetaObject(){
+    public static Meta getMetaObject(){         //获取meta对象
         if (meta==null){
             synchronized (MetaManager.class){
                 if (meta==null)

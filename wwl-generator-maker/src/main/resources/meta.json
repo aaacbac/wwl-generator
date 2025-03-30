@@ -6,7 +6,7 @@
   "author": "wwl",
   "createTime": "2025-3-7",
   "fileConfig": {
-    "inputRootPath": "/Users/yupi/Code/wwl-generator/demo-projects/acm-template-pro",
+    "inputRootPath": "D:/idea worksplace/wwl-generator/demo-projects/acm-template-pro",
     "outputRootPath": "generated",
     "type": "dir",
     "files": [
